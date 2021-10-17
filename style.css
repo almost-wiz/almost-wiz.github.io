@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: rgb(154, 215, 240);
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.some_info {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0;
+}
+
+.header,
+.my_work,
+.my_technologies,
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.about {
+  text-align: left;
+}
+
+.profile_picture {
+  padding: 0 15px 0 0;
+}
+
+#profile_picture {
+  border-radius: 1000px;
+  box-shadow: black 5px 5px 20px;
+  width: 25vw;
+  height: 25vw;
+  max-width: 600px;
+  max-height: 600px;
+}
+
+#personal_info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 15px;
+}
+
+.full_info {
+  width: 1100px;
+  margin: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.title_text {
+  display: inline;
+  text-transform: uppercase;
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 40px;
+  padding: 0 20px 10px;
+  border-bottom: 2px solid black;
+}
+
+.stand_out_text {
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 30px;
+}
+
+.common_text {
+  font-family: Verdana, Tahoma, serif;
+  font-size: 20px;
+  padding-top: 20px;
+}
+
+.bold {
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.card_title {
+  text-align: center;
+  font-size: 20px;
+  color: rgb(49, 49, 49)
+}
+
+.card_text {
+  font-size: 17px;
+  color: rgb(73, 73, 73)
+}
+
+.card_ul {
+  margin-left: 5%;
+}
+
+.card_li {
+  margin-top: 10px;
+  color: rgb(73, 73, 73)
+}
+
+.cards {
+  width: 1100px;
+  margin: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: left;
+}
+
+.card,
+.informatrion_card {
+  padding: 25px;
+  margin: 40px 10px;
+  width: 450px;
+  min-height: 350px;
+  background-color: rgb(96, 170, 199);
+  box-shadow: black 5px 5px 10px;
+}
+
+.informatrion_card {
+  width: 1000px;
+  height: auto;
+  border-radius: 50px;
+  padding: 40px;
+}
+
+.card:nth-child(1),
+.card:nth-child(4) {
+  background-color: skyblue;
+}
+
+.grid_wrapper {
+  width: 1000px;
+  margin: 100px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 2vw;
+}
+
+.grid_card {
+  min-height: 100px;
+  color:rgb(73, 73, 73)
+}
+
+.footer {
+  height: 150px;
+}
+
+@media screen and (max-width: 1100px) {
+  .cards {
+    width: 90%;
+  }
+
+  .card:nth-child(even) {
+    background-color: skyblue;
+  }
+
+  .card:nth-child(odd) {
+    background-color: rgb(96, 170, 199);
+  }
+
+  .informatrion_card {
+    width: 80%;
+  }
+
+  .grid_wrapper {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid_wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .title_text {
+    font-size: 6vw;
+  }
+
+  .stand_out_text {
+    font-size: 5vw;
+  }
+
+  .common_text,
+  .card_title {
+    font-size: 4vw;
+  }
+  
+  .card_text {
+    font-size: 4vw;
+  }
+
+  .informatrion_card {
+    width: 85%;
+    margin: 40px 0;
+    padding: 30px 20px;
+  }
+
+  .footer {
+    height: 70px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .some_info {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 50px 0;
+  }
+
+  .profile_picture {
+    padding: 0;
+    margin-bottom: 15px;
+  }
+  
+  #profile_picture {
+    width: 50vw;
+    height: 50vw;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .card {
+    min-height: auto;
+  }
+}
